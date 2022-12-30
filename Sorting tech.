@@ -1,0 +1,42 @@
+//BUBBLE SORT BUBS
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void bubbleSort(int *arr,int n){
+    
+    if (n==0||n==1){
+        return;
+    }
+
+    for(int i=0;i<n;i++){
+        if (arr[i]>arr[i+1]){
+            int c = arr[i];
+            arr[i] =arr[i + 1];
+            arr[i + 1] = c;
+        }
+        
+    }
+    
+    bubbleSort(arr,n-1);
+}
+
+prInt(int *arr,int size){
+
+       for(int i=0;i<size;i++){
+        printf("%d",arr[i]);
+       }
+           
+}
+
+int main(){
+
+     int seed[]={9,8,7,6,5,4,3,2,1};
+
+     prInt(seed,9);
+     printf("\n");
+     bubbleSort(&seed,9);
+     prInt(&seed,9);
+
+
+}
